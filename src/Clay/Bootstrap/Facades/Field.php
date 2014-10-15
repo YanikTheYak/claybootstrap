@@ -1,6 +1,6 @@
 <?php
 
-namespace Bootstrap\Facades;
+namespace Clay\Bootstrap\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

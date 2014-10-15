@@ -1,11 +1,11 @@
 <?php
 
-namespace Bootstrap\Alert;
+namespace Clay\Bootstrap\Alert;
 
 use Illuminate\Session\Store as Session;
 use Illuminate\Translation\Translator as Lang;
 use Illuminate\View\Factory as View;
-use Bootstrap\Utils;
+use Clay\Bootstrap\Utils;
 
 class AlertWrapper
 {

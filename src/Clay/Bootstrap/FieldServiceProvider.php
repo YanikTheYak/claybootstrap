@@ -1,6 +1,6 @@
 <?php
 
-namespace Bootstrap;
+namespace Clay\Bootstrap;
 
 use Illuminate\Support\ServiceProvider;
 

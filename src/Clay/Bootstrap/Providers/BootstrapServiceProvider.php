@@ -1,10 +1,10 @@
 <?php
 
-namespace Bootstrap\Providers;
+namespace Clay\Bootstrap\Providers;
 
-use Bootstrap\Alert\AlertWrapper;
+use Clay\Bootstrap\Alert\AlertWrapper;
 use Illuminate\Support\ServiceProvider;
-use Bootstrap\FieldBuilder;
+use Clay\Bootstrap\FieldBuilder;
 
 class BootstrapServiceProvider extends ServiceProvider
 {

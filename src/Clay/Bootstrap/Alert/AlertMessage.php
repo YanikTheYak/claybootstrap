@@ -1,8 +1,8 @@
 <?php
 
-namespace Bootstrap\Alert;
+namespace Clay\Bootstrap\Alert;
 
-use \Bootstrap\Alert\AlertWrapper as Wrapper;
+use Clay\Bootstrap\Alert\AlertWrapper as Wrapper;
 
 class AlertMessage
 {

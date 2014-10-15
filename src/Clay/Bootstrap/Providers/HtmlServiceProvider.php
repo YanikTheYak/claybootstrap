@@ -1,9 +1,9 @@
 <?php
 
-namespace Bootstrap\Providers;
+namespace Clay\Bootstrap\Providers;
 
-use Bootstrap\FormBuilder,
-    Illuminate\Html\HtmlServiceProvider as ServiceProvider;
+use Clay\Bootstrap\FormBuilder;
+use Illuminate\Html\HtmlServiceProvider as ServiceProvider;
 
 class HtmlServiceProvider extends ServiceProvider
 {
