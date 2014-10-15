@@ -1,0 +1,26 @@
+{
+    "name": "cyberduck/claybootstrap",
+    "description": "This Laravel 4.3 package is a collection of small components to generate views faster based on getboostrap.com styles but are also customizable",
+    "license":"MIT",
+    "keywords":["bootstrap","laravel","getboostrap.com","form","helpers"],
+    "authors": [
+        {
+            "name": "Duilio Palacios",
+            "email": "silence@dessigual.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-0": {
+            "Clay\\Bootstrap\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
