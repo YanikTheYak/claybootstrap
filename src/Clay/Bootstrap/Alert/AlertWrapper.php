@@ -24,7 +24,7 @@ class AlertWrapper
 
     public function __call($name, $args)
     {
-        return $this->newMessage($this, $name, $args[0], isset($args[1]) ? $args[1] : array());
+        return $this->newMessage($name, $args[0], isset($args[1]) ? $args[1] : array());
     }
 
     public function newMessage($name, $message, $parameters = array())
