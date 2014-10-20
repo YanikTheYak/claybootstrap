@@ -14,15 +14,15 @@ class FieldBuilder
     protected $templatesFolder = 'bootstrap/fields/';
 
     protected $defaultClass = [
-        'default'  => 'form-control',
-        'checkbox' => '',
+        'default'     => 'form-control',
+        'checkbox'    => '',
         'error_class' => 'has-error'
     ];
 
     public function __construct(Form $form, View $view, Session $session)
     {
-        $this->form = $form;
-        $this->view = $view;
+        $this->form    = $form;
+        $this->view    = $view;
         $this->session = $session;
     }
 
@@ -122,7 +122,7 @@ class FieldBuilder
     {
         $folder = $this->getTemplatesFolder();
 
-        if (\File::exists('app/views/'  . $folder . $type . '.blade.php')) {
+        if (\File::exists(app_path() . '/views/'  . $folder . $type . '.blade.php')) {
             return $folder . $type;
         }
 
@@ -132,11 +132,12 @@ class FieldBuilder
     public function input($type, $name, $value = null, $attributes = array(), $options = array())
     {
         $this->buildCssClasses($type, $attributes);
-        $label = $this->buildLabel($name, $attributes);
-        $control = $this->buildControl($type, $name, $value, $attributes, $options);
-        $error = $this->buildError($name);
+
+        $label       = $this->buildLabel($name, $attributes);
+        $control     = $this->buildControl($type, $name, $value, $attributes, $options);
+        $error       = $this->buildError($name);
         $error_class = $this->buildErrorClass($error);
-        $template = $this->buildTemplate($type);
+        $template    = $this->buildTemplate($type);
 
         return $this->view->make($template, compact ('name', 'label', 'control', 'error', 'error_class'));
     }
