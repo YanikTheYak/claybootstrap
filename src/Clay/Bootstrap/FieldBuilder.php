@@ -38,7 +38,7 @@ class FieldBuilder
 
     public function getDefaultClass($type)
     {
-        if (isset ($this->defaultClass[$type])) {
+        if (isset($this->defaultClass[$type])) {
             return $this->defaultClass[$type];
         }
 
@@ -49,7 +49,7 @@ class FieldBuilder
     {
         $defaultClasses = $this->getDefaultClass($type);
 
-        if (isset ($attributes['class'])) {
+        if (isset($attributes['class'])) {
             $attributes['class'] .= ' ' . $defaultClasses;
         } else {
             $attributes['class'] = $defaultClasses;
@@ -85,13 +85,17 @@ class FieldBuilder
     {
         unset($attributes['label']);
 
+        if (!isset($attributes['id'])) {
+            $attributes['id'] = $name;
+        }
+
         switch ($type) {
             case 'select':
                 return $this->form->select($name, $this->addEmptyOption($options), $value, $attributes);
             case 'password':
                 return $this->form->password($name, $attributes);
             case 'checkbox':
-                return $this->form->checkbox($name);
+                return $this->form->checkbox($name, $value, isset($attributes['selected']) ? true : false, array_except($attributes, ['selected']));
             case 'textarea':
                 return $this->form->textarea($name, $value, $attributes);
             default:
@@ -102,6 +106,7 @@ class FieldBuilder
     public function buildError($name)
     {
         $error = null;
+		
         if ($this->session->has('errors')) {
             $errors = $this->session->get('errors');
 
