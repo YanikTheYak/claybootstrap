@@ -68,7 +68,7 @@ class FieldBuilder
             $label = str_replace('_', ' ', $name);
         }
 
-        return ucfirst($label);
+        return ucfirst(strtolower($label));
     }
 
     public function addEmptyOption($options)
