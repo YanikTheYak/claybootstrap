@@ -25,3 +25,7 @@ Add the alias to the `aliases` array
 'Field' => 'Clay\Bootstrap\Facades\Field',
 'Alert' => 'Clay\Bootstrap\Facades\Alert',
 ```
+
+### Translations
+
+Translations for labels are automatically picked up from app/lang/formlabels.php or the `attributes` key within app/lang/validation.php.
