@@ -62,7 +62,10 @@ class FieldBuilder
             return $attributes['label'];
         }
 
-        if (\Lang::has('validation.attributes.' . $name)) {
+        if (\Lang::has('formlabels.' . $name)) {
+            $label = \Lang::get('formlabels.' . $name);
+        }
+        elseif (\Lang::has('validation.attributes.' . $name)) {
             $label = \Lang::get('validation.attributes.' . $name);
         } else {
             $label = str_replace('_', ' ', $name);
@@ -106,7 +109,7 @@ class FieldBuilder
     public function buildError($name)
     {
         $error = null;
-		
+
         if ($this->session->has('errors')) {
             $errors = $this->session->get('errors');
 
