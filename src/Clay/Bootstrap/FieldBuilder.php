@@ -2,7 +2,7 @@
 
 namespace Clay\Bootstrap;
 
-use Illuminate\Html\FormBuilder as Form;
+use Collective\Html\FormBuilder as Form;
 use Illuminate\View\Factory as View;
 use Illuminate\Session\Store as Session;
 

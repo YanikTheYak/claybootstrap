@@ -5,7 +5,7 @@ namespace Clay\Bootstrap\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Illuminate\Html\FormBuilder
+ * @see \Collective\Html\FormBuilder
  */
 class Field extends Facade
 {
