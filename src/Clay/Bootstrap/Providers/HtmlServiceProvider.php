@@ -3,7 +3,7 @@
 namespace Clay\Bootstrap\Providers;
 
 use Clay\Bootstrap\FormBuilder;
-use Illuminate\Html\HtmlServiceProvider as ServiceProvider;
+use Collective\Html\HtmlServiceProvider as ServiceProvider;
 
 class HtmlServiceProvider extends ServiceProvider
 {
