@@ -2,7 +2,7 @@
 
 namespace Clay\Bootstrap;
 
-use Illuminate\Html\FormBuilder as BaseFormBuilder;
+use Collective\Html\FormBuilder as BaseFormBuilder;
 use Str;
 
 class FormBuilder extends BaseFormBuilder
